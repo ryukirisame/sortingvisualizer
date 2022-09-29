@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  border: 0px;
+  background: none;
+}
+.nav {
+  background-color: #fdfdfd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  height: 64px;
+  padding: 0px 48px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: max-content;
+  transition: padding 0.25s ease-in-out;
+}
+.newArray {
+  /* background-color: aquamarine; */
+  min-width: max-content;
+  margin-right: 48px;
+  /* border: 1px solid red; */
+  background-color: #6c5ce7;
+
+  padding: 12px 24px;
+  color: white;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: margin-right 0.25s ease-in-out;
+
+  /* border: 1px solid black; */
+}
+.newArray:hover {
+  background-color: #5640ff;
+}
+#sortButtons-2 {
+  display: none;
+}
+.sortButtons {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  /* overflow-x: scroll; */
+
+  /* background-color: aqua; */
+}
+
+.sortButton {
+  min-width: max-content;
+  margin: 0 10px;
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: margin 0.25s ease-in-out;
+  /* border: 1px solid black; */
+  /* background-color: red; */
+}
+.sortButton:hover {
+  color: #5640ff;
+}
+.disable:hover {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: auto;
+}
+.sortButton:first-child {
+  /* background-color: aqua; */
+  margin-left: 0;
+}
+.sortButton:last-child {
+  margin-right: 0;
+}
+.controls {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+}
+
+.controls > div {
+  /* background-color: red; */
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+label {
+  /* background-color: aliceblue; */
+  margin-right: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 100px;
+  /* opacity: 0.7; */
+  /* -webkit-transition: 0.2s; */
+  /* transition: opacity 0.2s; */
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* appearance: none; */
+  /* width: 25px; */
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  /* height: 25px; */
+  background: #6c5ce7;
+  cursor: pointer;
+}
+#bars {
+  width: 100%;
+  margin-top: 32px;
+  height: 500px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transition: 2s height ease;
+}
+.barStyle {
+  width: 10px;
+  background-color: #6c5ce7;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.25s height ease-in-out;
+  border-radius: 0 0 2px 2px;
+}
+
+#dropDown {
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #6c5ce7;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+#playButton {
+  /* background-color: #5640ff; */
+  display: none;
+}
+
+#playButton:hover {
+  cursor: pointer;
+}
+#playButton:hover.disable:hover {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: auto;
+}
+/*Responsive Code*/
+@media only screen and (max-width: 850px) {
+  .nav {
+    padding: 0px 16px;
+  }
+  .sortButton {
+    margin: 0 4px;
+  }
+  .newArray {
+    margin-right: 16px;
+  }
+}
+@media only screen and (max-width: 736px) {
+  #sortButtons-1 {
+    display: none;
+  }
+  #sortButtons-2 {
+    display: inline-block;
+  }
+  #playButton {
+    display: inline-block;
+  }
+}

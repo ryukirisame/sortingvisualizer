@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sorting Visualizer</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="nav">
+      <button class="newArray">New Array</button>
+      <div class="sortButtons" id="sortButtons-1">
+        <button class="sortButton" id="bubble">Bubble Sort</button>
+        <button class="sortButton" id="selection">Selection Sort</button>
+        <button class="sortButton" id="insertion">Insertion Sort</button>
+        <button class="sortButton" id="quick">Quick Sort</button>
+        <button class="sortButton" id="merge">Merge Sort</button>
+      </div>
+      <div class="sortButtons" id="sortButtons-2">
+        <select name="selectAlgorithm" id="dropDown">
+          <option value="0">Bubble Sort</option>
+          <option value="1">Selection Sort</option>
+          <option value="2">Insertion Sort</option>
+          <option value="3">Quick Sort</option>
+          <option value="4">Merge Sort</option>
+        </select>
+      </div>
+      <button id="playButton">
+        <span class="material-icons-outlined"> play_circle_filled </span>
+      </button>
+    </div>
+    <div class="controls">
+      <div>
+        <label for="arr_size">Size</label>
+        <input
+          id="arr_size"
+          class="slider"
+          type="range"
+          min="5"
+          max="120"
+          step="1"
+          value="50"
+        />
+      </div>
+      <div>
+        <label for="arr_speed">Speed</label>
+        <input
+          id="arr_speed"
+          type="range"
+          class="slider"
+          min="10"
+          max="300"
+          stepDown="10"
+          value="50"
+        />
+      </div>
+    </div>
+    <div id="bars"></div>
+    <script src="./javaScript/main.js"></script>
+    <script src="./javaScript/bubble.js"></script>
+    <script src="./javaScript/selection.js"></script>
+    <script src="./javaScript/insertion.js"></script>
+    <script src="./javaScript/quick.js"></script>
+    <script src="./javaScript/merge.js"></script>
+  </body>
+</html>
